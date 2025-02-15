@@ -1,36 +1,31 @@
 document.addEventListener('DOMContentLoaded', event => {
+
     const app = firebase.app();
-    console.log("Firebase app initialized:", app);
+    console.log(app);
 
     const db = firebase.firestore();
 
-    const myPost = db.collection('posts').doc('firstpost');
+    const myPost = db.collection('posts').doc('mypost');
 
-    myPost.onSnapshot(doc => {
-        if (doc.exists) {
+    myPost.get()
+        .then(doc => {
             const data = doc.data();
-            console.log("Document data:", data);
-            const postContainer = document.getElementById('post-container');
-            postContainer.innerHTML = `${data.title}<br>${data.createdAt}<br>`;
-        } else {
-            console.log("No such document!");
-        }
-    }, error => {
-        console.error("Error fetching document:", error);
-    });
+            console.log(data);
+            document.write(data.title + `<br>`)
+            document.write(data.views + `<br>`)
+        })
+
 });
 
 function googleLogin() {
     const provider = new firebase.auth.GoogleAuthProvider();
 
     firebase.auth().signInWithPopup(provider)
+
         .then(result => {
             const user = result.user;
-            const userContainer = document.getElementById('user-container');
-            userContainer.innerHTML = `Hello ${user.displayName}`;
-            console.log("User signed in:", user);
+            document.write(`Hello ${user.displayName}`);
+            console.log(user)
         })
-        .catch(error => {
-            console.error("Error during sign-in:", error);
-        });
+        .catch(console.log)
 }
