@@ -13,6 +13,7 @@ import android.os.Bundle
 //import androidx.compose.ui.tooling.preview.Preview
 //import com.example.fietsmeet.ui.theme.FietsmeetTheme
 ////my imports
+import android.widget.ImageView
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -75,6 +76,8 @@ class MainActivity : AppCompatActivity() {
                 finish()
             }
         }
+
+
     }
 
     override fun onStart() {
