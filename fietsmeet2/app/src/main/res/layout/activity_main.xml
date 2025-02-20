@@ -1,53 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:padding="20dp"
     tools:context=".MainActivity">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imgHedgehog"-->
+<!--        android:layout_width="246dp"-->
+<!--        android:layout_height="222dp"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        android:src="@drawable/hedgehog_1"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="30dp"/>-->
+
+
+    <!-- Welcome Back Text -->
+    <TextView
+        android:id="@+id/tvWelcomeBack"
+        android:layout_width="340dp"
+        android:layout_height="79dp"
+        android:text="Welcome Back!"
+        android:textColor="#0D98BA"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="300dp"/> <!-- Adjust spacing from top -->
 
     <!-- Email Input Field -->
     <EditText
         android:id="@+id/idEdtEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="354dp"
+        android:layout_height="63dp"
         android:hint="@string/enter_your_email"
         android:inputType="textEmailAddress"
         android:importantForAutofill="no"
         android:padding="12dp"
-        android:background="@android:drawable/edit_text" />
-
-    <!-- Spacer for better spacing -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="16dp" />
+        android:background="@android:drawable/edit_text"
+        android:layout_below="@id/tvWelcomeBack"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
 
     <!-- Password Input Field -->
     <EditText
         android:id="@+id/idEdtPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="354dp"
+        android:layout_height="60dp"
         android:hint="@string/enter_password"
         android:inputType="textPassword"
         android:importantForAutofill="no"
         android:padding="12dp"
-        android:background="@android:drawable/edit_text" />
+        android:background="@android:drawable/edit_text"
+        android:layout_below="@id/idEdtEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
 
-    <!-- Spacer for better spacing -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="20dp" />
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textColor="#0F83A0"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:gravity="end"
+        android:layout_alignEnd="@id/idEdtPassword"
+        android:layout_below="@id/idEdtPassword"
+        android:layout_marginTop="5dp"/>
 
     <!-- Login Button -->
     <Button
         android:id="@+id/idBtnLogin"
+        android:layout_width="354dp"
+        android:layout_height="60dp"
+        android:text="@string/login"
+        android:padding="15dp"
+        android:background="@drawable/button_bg"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/tvForgotPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Horizontal Line -->
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#0E6E85"
+        android:alpha="0.21"
+        android:layout_below="@id/idBtnLogin"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- OR Text -->
+    <TextView
+        android:id="@+id/tvOr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/login"
-        android:padding="12dp"
-        android:layout_gravity="center" />
+        android:text="OR"
+        android:textColor="#0E6E85"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:layout_below="@id/viewDivider"
+        android:layout_centerHorizontal="true"/>
 
-</LinearLayout>
+<!--    <Button-->
+<!--        android:id="@+id/btnGoogleLogin"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:text="Continue with Google"-->
+<!--        android:textColor="#000000"-->
+<!--        android:drawableStart="@drawable/google_logo"-->
+<!--        android:backgroundTint="#FFFFFF"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:padding="10dp"-->
+<!--        android:elevation="3dp"/>-->
+
+<!--    &lt;!&ndash; Facebook Login &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/btnFacebookLogin"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:text="Continue with Facebook"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:drawableStart="@drawable/facebook_logo"-->
+<!--        android:backgroundTint="#1877F2"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:padding="10dp"-->
+<!--        android:elevation="3dp"/>-->
+
+<!--    &lt;!&ndash; Apple Login &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/btnAppleLogin"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:text="Continue with Apple"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:drawableStart="@drawable/apple_logo"-->
+<!--        android:backgroundTint="#000000"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:padding="10dp"-->
+<!--        android:elevation="3dp"/>-->
+
+    <!-- Sign Up Text (Placed at the Bottom of the Screen) -->
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account? Sign up"
+        android:textColor="#0F83A0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+</RelativeLayout>

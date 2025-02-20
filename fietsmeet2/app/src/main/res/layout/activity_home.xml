@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:padding="20dp"
     tools:context=".HomeActivity">
 
-    <!-- TextView for displaying user's email address -->
+    <!-- Welcome Text (User Email) -->
     <TextView
         android:id="@+id/idTVWelcome"
         android:layout_width="match_parent"
@@ -19,22 +17,28 @@
         android:textSize="20sp"
         android:textStyle="bold"
         android:gravity="center"
-        tools:text="Welcome, $User!" />
+        tools:text="Welcome, $User!"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/> <!-- Adjust top margin -->
 
-    <!-- Spacer to create some space between elements -->
+    <!-- Spacer (Optional) -->
     <View
+        android:id="@+id/spacer"
         android:layout_width="match_parent"
-        android:layout_height="20dp" />
+        android:layout_height="20dp"
+        android:layout_below="@id/idTVWelcome"/>
 
-    <!-- Button for logging out -->
+    <!-- Logout Button -->
     <Button
         android:id="@+id/idBtnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/logout"
         android:padding="12dp"
-        android:layout_gravity="center_horizontal" />
+        android:background="@drawable/button_bg"
+        android:textColor="#FFFFFF"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/spacer"
+        android:layout_marginTop="20dp"/>
 
-</LinearLayout>
-
-
+</RelativeLayout>
