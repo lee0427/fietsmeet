@@ -20,6 +20,7 @@ import android.content.SharedPreferences
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -42,6 +43,21 @@ class MainActivity : AppCompatActivity() {
         val emailEdt = findViewById<EditText>(R.id.idEdtEmail)
         val passwordEdt = findViewById<EditText>(R.id.idEdtPassword)
         val loginBtn = findViewById<Button>(R.id.idBtnLogin)
+        val forgotPasswordTV = findViewById<TextView>(R.id.tvForgotPassword) // ADD THIS LINE
+
+        // Add click listener to "Forgot Password?" TextView
+        forgotPasswordTV.setOnClickListener {
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
+            startActivity(intent)
+        }
+
+        val signUpText = findViewById<TextView>(R.id.tvSignUp) // Find Sign Up TextView
+
+        signUpText.setOnClickListener {
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
+        }
+
 
         // getting the data which is stored in shared preferences.
         sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE)

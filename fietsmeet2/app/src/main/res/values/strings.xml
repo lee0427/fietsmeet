@@ -10,6 +10,8 @@
     <string name="logout">Logout</string>
     <string name="title_activity_home">HomeActivity.ht</string>
     <string name="welcome_message">Welcome, %s</string>
+    <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
 
 
     <!--   <string name="title_activity_home.kt">HomeActivity.kt</string>&ndash;&gt;-->

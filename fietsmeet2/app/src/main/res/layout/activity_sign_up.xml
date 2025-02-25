@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <!-- Sign-Up Title -->
+    <TextView
+        android:id="@+id/tvSignUpTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create an Account"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"/>
+
+    <!-- Email Input Field -->
+    <EditText
+        android:id="@+id/idEdtSignUpEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_below="@id/tvSignUpTitle"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Username Input Field -->
+    <EditText
+        android:id="@+id/idEdtSignUpUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your username"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_below="@id/idEdtSignUpEmail"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Phone Number Input Field -->
+    <EditText
+        android:id="@+id/idEdtSignUpPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your phone number"
+        android:inputType="phone"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_below="@id/idEdtSignUpUsername"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Password Input Field -->
+    <EditText
+        android:id="@+id/idEdtSignUpPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your password"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:background="@android:drawable/edit_text"
+        android:layout_below="@id/idEdtSignUpPhone"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Sign-Up Button -->
+    <Button
+        android:id="@+id/idBtnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:padding="12dp"
+        android:background="@drawable/button_bg"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/idEdtSignUpPassword"
+        android:layout_marginTop="20dp"/>
+
+    <!-- "Or With" Text -->
+    <TextView
+        android:id="@+id/tvOrWith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Or With"
+        android:textColor="#0F83A0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/idBtnSignUp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Space for future social login buttons -->
+    <View
+        android:id="@+id/viewSocialLoginSpace"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/tvOrWith"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Already Have an Account? Login -->
+    <TextView
+        android:id="@+id/tvAlreadyHaveAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account? Login"
+        android:textColor="#0F83A0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+</RelativeLayout>
