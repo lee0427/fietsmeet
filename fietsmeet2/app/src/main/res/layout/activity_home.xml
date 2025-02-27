@@ -1,44 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
-    tools:context=".HomeActivity">
+    android:padding="20dp">
 
-    <!-- Welcome Text (User Email) -->
+    <!-- Welcome Message -->
     <TextView
         android:id="@+id/idTVWelcome"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:text="Welcome!"
+        android:textSize="22sp"
         android:textStyle="bold"
-        android:gravity="center"
-        tools:text="Welcome, $User!"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"/> <!-- Adjust top margin -->
-
-    <!-- Spacer (Optional) -->
-    <View
-        android:id="@+id/spacer"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_below="@id/idTVWelcome"/>
+        android:layout_marginTop="100dp"/>
 
     <!-- Logout Button -->
     <Button
         android:id="@+id/idBtnLogout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/logout"
+        android:text="Logout"
         android:padding="12dp"
-        android:background="@drawable/button_bg"
+        android:background="@android:color/holo_blue_light"
         android:textColor="#FFFFFF"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/spacer"
+        android:layout_below="@id/idTVWelcome"
         android:layout_marginTop="20dp"/>
 
+    <!-- Bottom Navigation Bar -->
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottom_navigation"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:background="?android:attr/windowBackground"-->
+<!--        app:menu="@menu/bottom_nav_menu"/>-->
 </RelativeLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:padding="20dp"-->
+<!--    tools:context=".HomeActivity">-->
+
+<!--    &lt;!&ndash; Welcome Text (User Email) &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/idTVWelcome"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="10dp"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:gravity="center"-->
+<!--        tools:text="Welcome, $User!"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="50dp"/> &lt;!&ndash; Adjust top margin &ndash;&gt;-->
+
+<!--    &lt;!&ndash; Spacer (Optional) &ndash;&gt;-->
+<!--    <View-->
+<!--        android:id="@+id/spacer"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="20dp"-->
+<!--        android:layout_below="@id/idTVWelcome"/>-->
+
+<!--    &lt;!&ndash; Logout Button &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/idBtnLogout"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/logout"-->
+<!--        android:padding="12dp"-->
+<!--        android:background="@drawable/button_bg"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_below="@id/spacer"-->
+<!--        android:layout_marginTop="20dp"/>-->
+
+<!--</RelativeLayout>-->

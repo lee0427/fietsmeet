@@ -7,14 +7,14 @@
     android:padding="20dp"
     tools:context=".MainActivity">
 
-<!--    <ImageView-->
-<!--        android:id="@+id/imgHedgehog"-->
-<!--        android:layout_width="246dp"-->
-<!--        android:layout_height="222dp"-->
-<!--        android:scaleType="fitCenter"-->
-<!--        android:src="@drawable/hedgehog_1"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_marginTop="30dp"/>-->
+    <ImageView
+        android:id="@+id/imgHedgehog"
+        android:layout_width="246dp"
+        android:layout_height="222dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/hedgehog_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
 
 
     <!-- Welcome Back Text -->
