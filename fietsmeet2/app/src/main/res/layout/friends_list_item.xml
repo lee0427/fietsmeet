@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/friend_card_background"
+    android:layout_margin="8dp">
+
+    <!-- Friend Profile Image -->
+    <ImageView
+        android:id="@+id/friendImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:background="@drawable/circle_background"/>
+
+    <!-- Friend Username -->
+    <TextView
+        android:id="@+id/friendName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friend Name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#0F83A0"
+        android:layout_toEndOf="@id/friendImage"
+        android:layout_marginStart="16dp"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>
