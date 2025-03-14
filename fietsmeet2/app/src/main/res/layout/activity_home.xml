@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <!-- Welcome Message -->
+    <TextView
+        android:id="@+id/idTVWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        android:textColor="#0F83A0"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
+
+<!--    Logout Button-->
+    <Button
+        android:id="@+id/idBtnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:padding="12dp"
+        android:background="#0F83A0"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/idTVWelcome"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_nav_menu"/>
+</RelativeLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:padding="20dp">-->
+
+<!--    &lt;!&ndash; Welcome Message &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/idTVWelcome"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Welcome!"-->
+<!--        android:textSize="22sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="100dp"/>-->
+
+<!--    &lt;!&ndash; Logout Button &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/idBtnLogout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/idTVWelcome"-->
+<!--        android:layout_marginTop="156dp"-->
+<!--        android:background="#0D98BA"-->
+<!--        android:padding="12dp"-->
+<!--        android:text="Logout"-->
+<!--        android:textColor="#FFFFFF" />-->
+
+<!--    &lt;!&ndash; Bottom Navigation Bar &ndash;&gt;-->
+<!--&lt;!&ndash;    <com.google.android.material.bottomnavigation.BottomNavigationView&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/bottom_navigation"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_alignParentBottom="true"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:background="?android:attr/windowBackground"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:menu="@menu/bottom_nav_menu"/>&ndash;&gt;-->
+<!--</RelativeLayout>-->
+
+
+

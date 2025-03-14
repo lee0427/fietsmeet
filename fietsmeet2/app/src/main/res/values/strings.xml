@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">FietsMeet</string>
+
+    <string name="login">Login</string>
+
+    <string name="enter_password">Enter password</string>
+
+    <string name="enter_your_email">Enter your Email</string>
+
+    <string name="logout">Logout</string>
+    <string name="title_activity_home">HomeActivity.ht</string>
+    <string name="welcome_message">Welcome, %s</string>
+    <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="title_activity_friends_activity.kt">FriendsActivity.kt</string>
+    <string name="title_activity_friends">FriendsActivity</string>
+    <string name="title_activity_chat">ChatActivity</string>
+
+
+    <!--   <string name="title_activity_home.kt">HomeActivity.kt</string>&ndash;&gt;-->
+
+</resources>
