@@ -13,8 +13,10 @@
         android:text="Friends"
         android:textSize="22sp"
         android:textStyle="bold"
+        android:textColor="#0F83A0"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
+
 
     <!-- Friends List -->
     <ListView

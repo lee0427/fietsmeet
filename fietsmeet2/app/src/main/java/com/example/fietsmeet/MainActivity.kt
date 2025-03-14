@@ -18,11 +18,14 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.text.TextUtils
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity() {
     companion object {
@@ -32,6 +35,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private lateinit var sharedpreferences: SharedPreferences
+    private lateinit var firebaseAuth: FirebaseAuth
     private var email: String? = null
     private var password: String? = null
 
@@ -44,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         val passwordEdt = findViewById<EditText>(R.id.idEdtPassword)
         val loginBtn = findViewById<Button>(R.id.idBtnLogin)
         val forgotPasswordTV = findViewById<TextView>(R.id.tvForgotPassword) // ADD THIS LINE
+        firebaseAuth = FirebaseAuth.getInstance()
 
         // Add click listener to "Forgot Password?" TextView
         forgotPasswordTV.setOnClickListener {
@@ -86,10 +91,33 @@ class MainActivity : AppCompatActivity() {
                 // to save our data with key and value.
                 editor.apply()
 
-                // starting new activity.
-                val i = Intent(this@MainActivity, HomeActivity::class.java)
-                startActivity(i)
-                finish()
+                firebaseAuth.signInWithEmailAndPassword(emailEdt.text.toString(), passwordEdt.text.toString()).addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        // if the task is successful we are
+                        // displaying a success toast message.
+                        val testRef = FirebaseDatabase.getInstance()
+                            .getReference("test")
+
+                        testRef.setValue("Hello Firebase!")
+                            .addOnSuccessListener {
+                                Log.d("FirebaseDB", "✅ Successfully wrote test data!")
+                            }
+                            .addOnFailureListener { e ->
+                                Log.e("FirebaseDB", "❌ Firebase test failed: ${e.message}")
+                            }
+
+                        Toast.makeText(this@MainActivity, "Login Successful", Toast.LENGTH_SHORT).show()
+
+                        // starting new activity.
+                        val i = Intent(this@MainActivity, HomeActivity::class.java)
+                        startActivity(i)
+                        finish()
+                    } else {
+                        // if the task is not successful we are
+                        // displaying a failure toast message.
+                        Toast.makeText(this@MainActivity, "Login Failed", Toast.LENGTH_SHORT).show()
+                    }
+                }
             }
         }
 
@@ -103,36 +131,4 @@ class MainActivity : AppCompatActivity() {
             startActivity(i)
         }
     }
-
-
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        enableEdgeToEdge()
-//        setContent {
-//            FietsmeetTheme {
-//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-//                    Greeting(
-//                        name = "Android",
-//                        modifier = Modifier.padding(innerPadding)
-//                    )
-//                }
-//            }
-//        }
-//    }
-//}
-//
-//@Composable
-//fun Greeting(name: String, modifier: Modifier = Modifier) {
-//    Text(
-//        text = "Hello $name!",
-//        modifier = modifier
-//    )
-//}
-//
-//@Preview(showBackground = true)
-//@Composable
-//fun GreetingPreview() {
-//    FietsmeetTheme {
-//        Greeting("Android")
-//    }
 }

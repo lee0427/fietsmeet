@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Welcome!"
+        android:textColor="#0F83A0"
         android:textSize="22sp"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
@@ -24,7 +25,7 @@
         android:layout_height="wrap_content"
         android:text="Logout"
         android:padding="12dp"
-        android:background="@android:color/holo_blue_light"
+        android:background="#0F83A0"
         android:textColor="#FFFFFF"
         android:layout_below="@id/idTVWelcome"
         android:layout_marginTop="20dp"/>

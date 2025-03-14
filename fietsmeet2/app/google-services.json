@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1055708240015",
+    "project_id": "use-q2-app",
+    "storage_bucket": "use-q2-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055708240015:android:dfa856f300bf252de4f8fa",
+        "android_client_info": {
+          "package_name": "com.example.fietsmeet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055708240015-bha94llmjgmknqa1ij40rh6bjqobk62n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYHjDmXjMMhtNQgvnyFqq7vHOBa1e4jmE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_giid": "1055708240015-bha94llmjgmknqa1ij40rh6bjqobk62n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

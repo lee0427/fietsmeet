@@ -17,21 +17,11 @@
             android:exported="false"
             android:label="@string/title_activity_chat"
             android:theme="@style/Theme.Fietsmeet" />
-<!--        <activity-->
-<!--            android:name=".ui.theme.ChatActivity"-->
-<!--            android:exported="false"-->
-<!--            android:label="@string/title_activity_chat"-->
-<!--            android:theme="@style/Theme.Fietsmeet" />-->
         <activity
             android:name=".FriendsActivity"
             android:exported="false"
             android:label="@string/title_activity_friends"
             android:theme="@style/Theme.Fietsmeet" />
-<!--        <activity-->
-<!--            android:name=".FriendsActivity.kt"-->
-<!--            android:exported="false"-->
-<!--            android:label="@string/title_activity_friends_activity.kt"-->
-<!--            android:theme="@style/Theme.Fietsmeet" />-->
         <activity
             android:name=".DashboardActivity"
             android:exported="false"
@@ -51,12 +41,11 @@
             android:name=".HomeActivity"
             android:exported="false"
             android:label="@string/title_activity_home"
-            android:theme="@style/Theme.Fietsmeet" /> <!-- <activity -->
-        <!-- android:name=".HomeActivity.kt" -->
-        <!--  -->
-        <!-- android:exported="false" -->
-        <!-- android:label="@string/title_activity_home_activity.kt" -->
-        <!-- android:theme="@style/Theme.Fietsmeet" /> -->
+            android:theme="@style/Theme.Fietsmeet" />
+        <activity android:name=".DetectUserActivity"
+            android:exported="false"
+            android:label="DetectUserActivity"
+            android:theme="@style/Theme.Fietsmeet"  />
         <activity
             android:name=".MainActivity"
             android:exported="true"
