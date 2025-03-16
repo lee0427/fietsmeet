@@ -13,6 +13,16 @@
         android:theme="@style/Theme.Fietsmeet"
         tools:targetApi="31">
         <activity
+            android:name=".ChallengesActivity"
+            android:exported="false"
+            android:label="@string/title_activity_challenges"
+            android:theme="@style/Theme.Fietsmeet" />
+        <activity
+            android:name=".ChallengesActivity.kt"
+            android:exported="false"
+            android:label="@string/title_activity_challenges_activity.kt"
+            android:theme="@style/Theme.Fietsmeet" />
+        <activity
             android:name=".ChatActivity"
             android:exported="false"
             android:label="@string/title_activity_chat"
@@ -42,10 +52,11 @@
             android:exported="false"
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.Fietsmeet" />
-        <activity android:name=".DetectUserActivity"
+        <activity
+            android:name=".DetectUserActivity"
             android:exported="false"
             android:label="DetectUserActivity"
-            android:theme="@style/Theme.Fietsmeet"  />
+            android:theme="@style/Theme.Fietsmeet" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

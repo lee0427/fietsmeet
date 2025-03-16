@@ -12,6 +12,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import com.google.firebase.database.FirebaseDatabase
 
 class FriendsActivity : AppCompatActivity() {
     private val database = FirebaseDatabase.getInstance("https://use-q2-app-default-rtdb.europe-west1.firebasedatabase.app").reference
@@ -59,7 +60,9 @@ class FriendsActivity : AppCompatActivity() {
                 }
                 R.id.nav_friends -> true
                 R.id.nav_community -> {
-                    Toast.makeText(this, "Community Clicked", Toast.LENGTH_SHORT).show()
+                    // 🔹 **Fix: Open ChallengesActivity when "Challenges" is clicked**
+                    val intent = Intent(this, ChallengesActivity::class.java)
+                    startActivity(intent)
                     true
                 }
                 R.id.nav_settings -> {

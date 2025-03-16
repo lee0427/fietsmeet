@@ -16,6 +16,8 @@
     <string name="title_activity_friends_activity.kt">FriendsActivity.kt</string>
     <string name="title_activity_friends">FriendsActivity</string>
     <string name="title_activity_chat">ChatActivity</string>
+    <string name="title_activity_challenges_activity.kt">ChallengesActivity.kt</string>
+    <string name="title_activity_challenges">ChallengesActivity</string>
 
 
     <!--   <string name="title_activity_home.kt">HomeActivity.kt</string>&ndash;&gt;-->
