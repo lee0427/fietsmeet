@@ -36,4 +36,16 @@
         android:layout_alignParentBottom="true"
         android:background="?android:attr/windowBackground"
         app:menu="@menu/bottom_nav_menu"/>
+
+    <!-- Floating Action Button (FAB) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addFriendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_marginBottom="24dp"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:backgroundTint="#0F83A0"
+        app:tint="@android:color/white" />
 </RelativeLayout>

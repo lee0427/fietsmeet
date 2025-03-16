@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
@@ -27,6 +28,8 @@ class FriendsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_friends)
 
         val listView = findViewById<ListView>(R.id.friendsListView)
+        val fabAddFriend = findViewById<FloatingActionButton>(R.id.addFriendButton)
+
         friendsListAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, friendsList)
         listView.adapter = friendsListAdapter
 
@@ -37,6 +40,13 @@ class FriendsActivity : AppCompatActivity() {
         listenForFriendships()
         listenForIncomingRequests()
         listenForDetectedUsers()
+
+        // Open Bottom Sheet when FAB is clicked
+        fabAddFriend.setOnClickListener {
+            val userSearchFragment = UserSearchFragment()
+            userSearchFragment.show(supportFragmentManager, "UserSearchFragment")
+        }
+
 
         // Bottom Navigation
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
