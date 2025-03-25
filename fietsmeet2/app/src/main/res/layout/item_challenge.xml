@@ -29,8 +29,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Challenge Title"
-                android:textStyle="bold"
-                android:textSize="18sp"/>
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/challengeDescription"
@@ -45,6 +45,7 @@
         android:id="@+id/challengeProgressBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:progressTint="#0F83A0"
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:progress="50"
         android:max="100"

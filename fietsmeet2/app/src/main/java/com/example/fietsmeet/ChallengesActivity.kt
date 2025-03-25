@@ -22,7 +22,8 @@ class ChallengesActivity : AppCompatActivity() {
         challengeList = listOf(
             Challenge("Meet 2 other users", "50% accomplished", 50, "Ends in 2 days"),
             Challenge("Feed your hedgehog", "0% accomplished", 0, "Ends in 5 days"),
-            Challenge("Win a challenge", "75% accomplished", 75, "Ends in 1 day")
+            Challenge("Bike 10km this week", "75% accomplished", 75, "Ends in 1 day"),
+            Challenge("Who will eat more fruit?", "Bo_the_survivor is beating you by 80%! Eat more fruit to fight back!",20, "Ends in 5 days")
         )
 
         // RecyclerView Setup
